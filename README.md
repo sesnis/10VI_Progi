@@ -1,0 +1,1 @@
+# Mans pirmais projekts ar Git Hub 
