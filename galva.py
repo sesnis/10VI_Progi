@@ -3,7 +3,7 @@ from flask import Flask
 from flask import request
 from flask import url_for
 from flask import render_template
-from funci import *
+from funci import tr_per
 
 app = Flask(__name__)
 
@@ -12,7 +12,8 @@ def root():
     aa = float(request.args.get('a',default='0.',type=str))
     bb = float(request.args.get('b',default='0.',type=str))
     cc = float(request.args.get('c',default='0.',type=str))
-    rez = "perimetrs="+str(funci.tr_per(aa,bb,cc))
+    rez = "perimetrs="+str(tr_per(aa,bb,cc))
+    return rez
 
 @app.route('/tests')
 def health():
